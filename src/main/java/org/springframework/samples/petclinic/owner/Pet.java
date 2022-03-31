@@ -18,10 +18,6 @@ import javax.persistence.Table;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.samples.petclinic.model.NamedEntity;
 
-/**
- * Simple business object representing a pet.
- */
-
 @Entity
 @Table(name = "pets")
 public class Pet extends NamedEntity {

@@ -9,17 +9,6 @@ import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- * Repository class for <code>Owner</code> domain objects All method names are compliant
- * with Spring Data naming conventions so this interface can easily be extended for Spring
- * Data. See:
- * https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.query-methods.query-creation
- *
- * @author Ken Krebs
- * @author Juergen Hoeller
- * @author Sam Brannen
- * @author Michael Isvy
- */
 public interface OwnerRepository extends Repository<Owner, Integer> {
 
 	/**
@@ -34,11 +23,11 @@ public interface OwnerRepository extends Repository<Owner, Integer> {
 	 * Retrieve {@link Owner}s from the data store by last name, returning all owners
 	 * whose last name <i>starts</i> with the given name.
 	 * @param lastName Value to search for
-	 * @return a Collection of matching {@link Owner}s (or an empty Collection if none
+	 * @return a Collection of matching {@link Owner}s (or an *empty Collection if none
 	 * found)
 	 */
 
-	@Query("SELECT DISTINCT owner FROM Owner owner left join  owner.pets WHERE owner.lastName LIKE :lastName% ")
+	@Query("SELECT DISTINCT owner FROM Owner owner left join  owner.pets WHERE owner.lastName LIKE :lastName%")
 	@Transactional(readOnly = true)
 	Page<Owner> findByLastName(@Param("lastName") String lastName, Pageable pageable);
 
@@ -58,7 +47,7 @@ public interface OwnerRepository extends Repository<Owner, Integer> {
 	void save(Owner owner);
 
 	/**
-	 * Returnes all the owners from data store
+	 * Returns all the owners from data store
 	 **/
 	@Query("SELECT owner FROM Owner owner")
 	@Transactional(readOnly = true)

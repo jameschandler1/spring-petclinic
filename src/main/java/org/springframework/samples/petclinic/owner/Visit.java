@@ -21,9 +21,8 @@ public class Visit extends BaseEntity {
 	@NotEmpty
 	private String description;
 
-	/**
-	 * Creates a new instance of Visit for the current date
-	 */
+	// Creates a new instance of Visit for the current date
+
 	public Visit() {
 		this.date = LocalDate.now();
 	}

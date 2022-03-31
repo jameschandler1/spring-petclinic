@@ -18,10 +18,6 @@ import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PropertyComparator;
 import org.springframework.samples.petclinic.model.Person;
 
-/**
- * Simple JavaBean domain object representing a veterinarian.
- */
-
 @Entity
 @Table(name = "vets")
 public class Vet extends Person {

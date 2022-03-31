@@ -84,6 +84,7 @@ public class Owner extends Person {
 	 * @param name to test
 	 * @return true if pet name is already in use
 	 */
+
 	public Pet getPet(String name) {
 		return getPet(name, false);
 	}
@@ -93,6 +94,7 @@ public class Owner extends Person {
 	 * @param name to test
 	 * @return a pet if pet id is already in use
 	 */
+
 	public Pet getPet(Integer id) {
 		for (Pet pet : getPets()) {
 			if (!pet.isNew()) {
@@ -110,6 +112,7 @@ public class Owner extends Person {
 	 * @param name to test
 	 * @return true if pet name is already in use
 	 */
+
 	public Pet getPet(String name, boolean ignoreNew) {
 		name = name.toLowerCase();
 		for (Pet pet : getPets()) {
@@ -137,6 +140,7 @@ public class Owner extends Person {
 	 * @param petId the identifier of the {@link Pet}, must not be {@literal null}.
 	 * @param visit the visit to add, must not be {@literal null}.
 	 */
+
 	public Owner addVisit(Integer petId, Visit visit) {
 
 		Assert.notNull(petId, "Pet identifier must not be null!");
