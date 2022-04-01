@@ -4,10 +4,14 @@
 
   <body>
 
-    <h2 th:text="#{welcome}">Welcome</h2>
+    <h2 class="welcome-h2" 
+    th:text="#{welcome}"
+    >WELCOME</h2>
+    <hr class='welcome-hr'>
     <div class="row">
         <div class="col-md-12">
-          <img class="img-responsive" src="../static/resources/images/pets.png" th:src="@{/resources/images/pets.png}"/>
+          <img style='width: 80%; height:100%; justify-content: center; margin-left: 7.5rem;' 
+          class="img-responsive" src="../static/resources/images/parrot.jpeg" th:src="@{/resources/images/parrot.jpeg}"/>
         </div>
     </div>
 
