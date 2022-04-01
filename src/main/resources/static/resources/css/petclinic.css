@@ -49,7 +49,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff; }
+  --bs-body-bg: #199383d7; }
 
 *,
 *::before,
@@ -59,6 +59,23 @@
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth; } }
+
+.welcome-hr {
+  height: 20px;
+  background-color: rgb(255, 21, 0);
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-h2 {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center !important;
+  margin-bottom: 2rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase; 
+}
 
 body {
   margin: 0;
@@ -2849,6 +2866,7 @@ textarea.form-control-lg {
   list-style: none; }
 
 .nav-link {
+  border-radius: 1rem;
   display: block;
   padding: 0.5rem 1rem;
   color: #0d6efd;
@@ -2892,7 +2910,7 @@ textarea.form-control-lg {
 .nav-pills .nav-link {
   background: none;
   border: 0;
-  border-radius: 0.25rem; }
+  border-radius: 2rem; }
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
@@ -7911,33 +7929,35 @@ strong {
   border-right: 0; }
 
 .navbar a.navbar-brand {
-  background: url("../images/spring-logo-dataflow.png") -1px -1px no-repeat;
-  margin: 12px 0 6px;
-  width: 229px;
-  height: 46px;
+  background: url("../images/logo.png") -1px -1px no-repeat;
+  background-size: 100%;
+  width: 3rem;
+  height: 3rem;
   display: inline-block;
   text-decoration: none;
   padding: 0; }
 
-.navbar a.navbar-brand span {
+/* .navbar a.navbar-brand span {
   display: block;
-  width: 229px;
-  height: 46px;
-  background: url("../images/spring-logo-dataflow.png") -1px -48px no-repeat;
+  width: 224px;
+  height: 224px;
+
+  background: url("../images/logo.png") -1px -1px no-repeat;
   opacity: 0;
   -moz-transition: opacity 0.12s ease-in-out;
   -webkit-transition: opacity 0.12s ease-in-out;
-  -o-transition: opacity 0.12s ease-in-out; }
+  -o-transition: opacity 0.12s ease-in-out; } */
 
-.navbar a.navbar-brand:hover span {
-  opacity: 1; }
+/* .navbar a.navbar-brand:hover span {
+  opacity: 1; } */
+
 
 .navbar li > a, .navbar-text {
   font-family: "montserratregular", sans-serif;
   text-shadow: none;
   font-size: 14px;
   /* line-height: 14px; */
-  padding: 28px 20px;
+  /* padding: 28px 20px; */
   transition: all 0.15s;
   -webkit-transition: all 0.15s;
   -moz-transition: all 0.15s;
@@ -7972,10 +7992,12 @@ strong {
   .navbar a.navbar-brand {
     display: block;
     margin: 0 auto 0 auto;
-    width: 148px;
-    height: 50px;
     float: none;
-    background: url("../images/spring-logo-dataflow-mobile.png") 0 center no-repeat; }
+    background: url("../images/logo.png") -1px -1px no-repeat;
+    background-size: 100%;
+    width: 3rem;
+    height: 3rem; 
+  }
   .homepage-billboard .homepage-subtitle {
     font-size: 21px;
     line-height: 21px; }
